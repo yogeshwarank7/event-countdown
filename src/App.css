@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #fff;
+}
+
+
+.event-form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.event-form input,
+.event-form textarea,
+.event-form button {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #555;
+  font-size: 1rem;
+  background: #111;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.event-form input[type="date"] {
+  color: white; 
+}
+
+.event-form input::placeholder,
+.event-form textarea::placeholder {
+  color: #aaa;
+}
+
+.event-form input:focus,
+.event-form textarea:focus {
+  outline: none;
+  border-color: #4cafef;
+  box-shadow: 0 0 8px #4cafef;
+}
+
+.event-form button {
+  background: linear-gradient(45deg, #4cafef, #8e44ad);
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.event-form button:hover {
+  background: linear-gradient(45deg, #3498db, #732d91);
+}
+
+
+.event-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+
+.event-card {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  transition: transform 0.2s ease;
+  min-height: 150px; 
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+}
+
+.event-card h3 {
+  margin-bottom: 5px;
+}
+
+.event-card p {
+  margin: 3px 0;
+}
+
+.card-buttons {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.edit-btn {
+  background: linear-gradient(45deg, #ff9800, #ffb84d);
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.edit-btn:hover {
+  background: linear-gradient(45deg, #e68900, #ff9900);
+}
+
+.delete-btn {
+  background: linear-gradient(45deg, #f44336, #ff6b6b);
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.delete-btn:hover {
+  background: linear-gradient(45deg, #d32f2f, #e74c3c);
+}
+
+.no-events {
+  color: #aaa;
+}
